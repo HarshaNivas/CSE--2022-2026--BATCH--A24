@@ -1,0 +1,58 @@
+# 🔥 Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 🔥 Virtual environment (VERY important)
+venv/
+env/
+ENV/
+.venv/
+
+# 🔥 Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# 🔥 Environment variables (secrets, API keys)
+.env
+
+# 🔥 Logs
+*.log
+
+# 🔥 OS files
+.DS_Store
+Thumbs.db
+
+# 🔥 VS Code / IDE settings
+.vscode/
+.idea/
+
+# 🔥 Temporary files
+*.tmp
+*.temp
+
+# 🔥 Model files (optional - depends on your case)
+# If your ML models are large, IGNORE them
+*.pkl
+*.joblib
+*.h5
+
+# 🔥 Build / dist
+build/
+dist/
+
+# 🔥 Flask instance folder (if created)
+instance/
+
+# 🔥 SQLite database (if used)
+*.db
+# Virtual environment
+.venv/
+
+# ML models
+*.sav
+*.pkl
+*.joblib
+
+# Large datasets
+*.csv

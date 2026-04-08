@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Drug Recommender</title>
+      <link rel="icon" href="static/images/logo.jpg" type="image/icon type">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icons -->
+      <link rel="icon" href="static/images/fevicon/logo.jpg" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="static/css/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="static/css/responsive.css" />
+      <!-- colors css -->
+      <link rel="stylesheet" href="static/css/colors.css" />
+      <!-- wow animation css -->
+      <link rel="stylesheet" href="static/css/animate.css" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+      <header class="header header_style1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo"><a href="{{url_for('index')}}"><img src="static/images/logo-1.png" alt="#" /></a></div>
+                  <div class="main_menu float-right">
+                     <div class="menu">
+                        <ul class="clearfix">
+                           <li><a href="{{url_for('index')}}">Home</a></li>
+                           <li class="active"><a href="{{url_for('about')}}">About</a></li>
+                           <li><a href="{{url_for('load')}}">Upload</a></li>
+                           <li><a href="{{url_for('view')}}">View</a></li>
+                           <li><a href="{{url_for('preprocess')}}">Preprocessing</a></li>
+                           <li><a href="{{url_for('model')}}">Model Training </a></li>
+                           <li><a href="{{url_for('drug')}}">EDA Section</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-2">
+                  <div class="right_bt"><a class="bt_main" href="{{url_for('prediction')}}">Prediction</a> </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section id="banner_parallax" class="inner_page_banner slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2 style="right: 114px;">About This Project</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end header -->
+      <!-- section -->
+      <section class="layout_padding padding_top_0">
+         <div class="container">
+            <div class="row margin_bottom_30">
+               <!-- featured cont -->
+               <div class="col-md-8 cont_theme_blog">
+                  <div class="full">
+                     <h3 style="bottom: 49px;">Drug Recommendation System Based On Sentiment Analysis Of Drug Review</h3>
+                     <p align = "justify">With the number of coronavirus cases growing exponentially, the nations are facing a shortage of doctors, particularly
+                        in rural areas where the quantity of specialists is less compared
+                        to urban areas. A doctor takes roughly 6 to 12 years to procure
+                        the necessary qualifications. Thus, the number of doctors can’t
+                        be expanded quickly in a short time frame. A Telemedicine
+                        framework ought to be energized as far as possible in this
+                        difficult time<br><br>Clinical blunders are very regular nowadays. Over 200
+                        thousand individuals in China and 100 thousand in the USA
+                        are affected every year because of prescription mistakes. Over
+                        40% medicine, specialists make mistakes while prescribing
+                        since specialists compose the solution as referenced by their
+                        knowledge, which is very restricted.</p>
+                  </div>
+               </div>
+               <!-- end featured cont -->
+               <!-- featured image -->
+               <div class="col-md-4 wow fadeInRight" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center"><img src="static/images/about-1.jpg" alt="#" style="margin-left: 52px;"/></div>
+                  </div>
+               </div>
+               <!-- end featured image -->
+            </div>
+            <div class="row margin_bottom_30">
+               <!-- featured image -->
+               <div class="col-md-4 wow fadeInLeft" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center"><img src="static/images/7.jpg" alt="#" /></div>
+                  </div>
+               </div>
+               <!-- end featured image -->
+               <!-- featured cont -->
+               <div class="col-md-8 cont_theme_blog">
+                  <div class="full"style="margin-left: 63px;">
+                     <h3>Importance of Sentiment Analysis</h3>
+                     <p align = "justify">Sentiment analysis is an application of natural language processing (NLP) that reveals the emotional states in human speech or text -- in this case, the speech and text that customers generate. Businesses can use machine-learning-based sentiment analysis software to examine this speech and text for positive or negative sentiment about the brand. With this information, companies have an opportunity to respond meaningfully -- and with greater empathy. The aim is to improve the customer relationship and enhance customer loyalty.<br>Customer interactions with organizations aren't the only source of this expressive text. Companies can also obtain customer sentiment by mining social media. Social media monitoring produces significant amounts of data for NLP analysis. Social media sentiment can be just as important in crafting empathy for the customer as direct interaction.</p>
+                  </div>
+               </div>
+               <!-- end featured cont -->
+            </div>
+            <div class="row margin_bottom_30">
+               <!-- featured cont -->
+               <div class="col-md-8 cont_theme_blog">
+                  <div class="full">
+                     <h3>Necessity of Sentiment Analysis</h3>
+                     <p align = "justify">Sentiment analysis can improve customer loyalty and retention through better service outcomes and customer experience.<br><br>For example, a customer makes a support request through email or chat. The NLP machine learning model generates an algorithm that performs sentiment analysis of the text from the customer's email or chat session. The algorithm detects the customer's emotional state. In this scenario, the customer feels agitation. Business rules related to this emotional state set the customer service agent up for the appropriate response. In this case, immediate upgrade of the support request to highest priority and prompts for a customer service representative to make immediate direct contact. Finally, the service representative's awareness of the customer's emotional state results in a more empathetic response than a standard one, leading to a satisfying resolution of the issue and improvement in the customer relationship.
+
+                        This scenario, simple though it may seem, shows how effectively sentiment analysis can improve customer outcomes. It's an example of augmented intelligence, where the NLP assists human performance. In this case, the customer service representative partners with machine learning software in pursuit of a more empathetic exchange with another person.
+                        
+                        This scenario is just one of many; and sentiment analysis isn't just a tool that businesses apply to customer interactions. It's also a resource for brand management in social media.</p>
+                  </div>
+               </div>
+               <!-- end featured cont -->
+               <!-- featured image -->
+               <div class="col-md-4 wow fadeInRight" data-wow-delay="0.5" data-wow-duration="1s">
+                  <div class="full">
+                     <div class="center"><img src="static/images/8.jpg" alt="#" style="margin-left: 115px;margin-top: 198px;"/></div>
+                  </div>
+               </div>
+               <!-- end featured image -->
+            </div>
+         </div>
+      </section>
+      <!-- end section -->
+      <!-- section -->
+      <section class="layout_padding gradiant_bg cross_layout">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <div class="full text_align_center white_fonts">
+                     <div class="heading_main center_head_border heading_style_1">
+                        <!-- <h2>Easy <span>Steps</span></h2> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row step_section">
+               <div class="offset-xl-1 col-xl-10 col-md-12">
+                  <div class="row">
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog arrow_right_step">
+                           <div class="step_inner">
+                              <!-- <i class="fa fa-diamond"></i><br> -->
+                              <!-- <p>Go app store</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog">
+                           <div class="step_inner">
+                              <!-- <i class="fa fa-user"></i><br> -->
+                              <!-- <p>Create an Account</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog">
+                           <div class="step_inner">
+                              <!-- <i class="fa fa-download"></i><br> -->
+                              <!-- <p>Download & Install</p> -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <div class="step_blog">
+                           <div class="step_inner">
+                              <!-- <i class="fa fa-thumbs-up"></i><br> -->
+                              <!-- <p>Enjoy & Rate us!</p> -->
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end section -->
+         <!-- footer -->
+         <footer class="footer_style_2">
+            <div class="footer_top">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 margin_bottom_30">
+                        <div class="full width_9" style="margin-bottom:25px;"> <a href="index.html"><img class="img-responsive" width="250" src="static/images/logo-1.png" alt="#"></a> </div>
+                        <div class="full width_9">
+                           <p align = "justify"style="width: 600px;">Since coronavirus has shown up, inaccessibility of
+                               legitimate clinical resources is at its peak, like the shortage of
+                               specialists and healthcare workers, lack of proper equipment and
+                               medicines etc. The entire medical fraternity is in distress, which
+                               results in numerous individual’s demise. Due to unavailability,
+                               individuals started taking medication independently without
+                               appropriate consultation, making the health condition worse
+                               than usual. As of late, machine learning has been valuable in
+                               numerous applications, and there is an increase in innovative
+                               work for automation. This paper intends to present a drug
+                               recommender system that can drastically reduce specialists heap.
+                               In this research, we build a medicine recommendation system
+                               that uses patient reviews to predict the sentiment using various
+                               vectorization processes like Bow, TF-IDF, Word2Vec, and Manual
+                               Feature Analysis, which can help recommend the top drug for a
+                               given disease by different classification algorithms. The predicted
+                               sentiments were evaluated by precision, recall, f1score, accuracy,
+                               and AUC score. The results show that classifier LinearSVC using
+                               TF-IDF vectorization outperforms all other models with 93%
+                               accuracy.</p>
+                        </div>
+                        <div class="full width_9">
+                           <!-- <p>the vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati..</p> -->
+                        </div>
+                     </div>
+                     <!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margin_bottom_30">
+                        <div class="full">
+                           <div class="footer_blog_2 width_9">
+                              <h3>Twitter Feed</h3>
+                              <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
+                                 Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
+                              </p>
+                              <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
+                                 Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
+                              </p>
+                           </div>
+                        </div>
+                     </div> -->
+                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 margin_bottom_30"style="left: 0px;margin-left: 290px;">
+                        <div class="full">
+                           <div class="footer_blog_2">
+                              <h3>Social</h3>
+                           </div>
+                        </div>
+                        <div class="full">
+                           <ul class="footer-links">
+                              <li><a href="#"><i class="fa fa-facebook"></i> 256 Likes</a></li>
+                              <li><a href="#"><i class="fa fa-github"></i> 57+ Projects</a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i> 1,258 Followers</a></li>
+                              <li><a href="#"><i class="fa fa-pinterest"></i> 2538+ Pins</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margin_bottom_30">
+                        <div class="full">
+                           <div class="footer_blog_2 width_9">
+                              <h3>Blog</h3>
+                           </div>
+                           <div class="blog_post_footer">
+                              <div class="blog_post_img"> <img width="80" height="80" src="static/images/scr1.png" alt="#"> </div>
+                              <div class="blog_post_cont">
+                                 <p class="date">July 22, 2015</p>
+                                 <p class="post_head">Round and round like a carousel</p>
+                              </div>
+                           </div>
+                           <div class="blog_post_footer">
+                              <div class="blog_post_img"> <img width="80" height="80" src="static/images/scr2.png" alt="#"> </div>
+                              <div class="blog_post_cont">
+                                 <p class="date">July 22, 2015</p>
+                                 <p class="post_head">Round and round like a carousel</p>
+                              </div>
+                           </div>
+                           <div class="blog_post_footer">
+                              <div class="blog_post_img"> <img width="80" height="80" src="static/images/scr3.png" alt="#"> </div>
+                              <div class="blog_post_cont">
+                                 <p class="date">July 22, 2015</p>
+                                 <p class="post_head">Round and round like a carousel</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- footer bottom -->
+            <div class="footer_bottom">
+               <!-- <p>Dessigned and developed by <strong>html.design</strong></p> -->
+            </div>
+         </footer>
+         <!-- end footer -->
+         <!--=========== js section ===========-->
+         <!-- jQuery (necessary for Bootstrap's JavaScript) -->
+         <script src="static/js/jquery.min.js"></script>
+         <script src="static/js/popper.min.js"></script>
+         <script src="static/js/bootstrap.min.js"></script>
+         <!-- wow animation -->
+         <script src="static/js/wow.js"></script>
+         <!-- custom js -->
+         <script src="static/js/custom.js"></script>
+         <!-- google map js -->
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+         <!-- end google map js -->
+      </body>
+   </html>

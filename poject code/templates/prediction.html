@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>Drug Recommender</title>
+      <link rel="icon" href="static/images/logo.jpg" type="image/icon type">
+      <link rel="icon" href="static/images/fevicon/logo.jpg" type="image/png" />
+      <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="static/css/style.css" />
+      <link rel="stylesheet" href="static/css/responsive.css" />
+      <link rel="stylesheet" href="static/css/colors.css" />
+      <link rel="stylesheet" href="static/css/animate.css" />
+   </head>
+   <body id="default_theme" class="home_page1">
+      <!-- header -->
+      <header class="header header_style1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-9 col-lg-10">
+                  <div class="logo">
+                     <a href="{{ url_for('index') }}"><img src="static/images/logo-1.png" alt="#" /></a>
+                  </div>
+                  <div class="main_menu float-right">
+                     <div class="menu">
+                        <ul class="clearfix">
+                           <li><a href="{{ url_for('index') }}">Home</a></li>
+                           <li><a href="{{ url_for('about') }}">About</a></li>
+                           <li><a href="{{ url_for('load') }}">Upload</a></li>
+                           <li><a href="{{ url_for('view') }}">View</a></li>
+                           <li><a href="{{ url_for('preprocess') }}">Preprocessing</a></li>
+                           <li><a href="{{ url_for('model') }}">Model Training</a></li>
+                           <li><a href="{{ url_for('drug') }}">EDA Section</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-lg-2">
+                  <div class="right_bt">
+                     <a class="bt_main" href="{{ url_for('prediction') }}">Prediction</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      
+      <!-- Banner Section -->
+      <section id="banner_parallax" class="slide_banner1">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="full">
+                     <div class="slide_cont">
+                        <h2 style="right: 150px;bottom: 74px;">Predict The Recommended Drugs</h2>
+                        <h2 style="right: 150px;bottom: 82px;">Based on Your Condition</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      
+      <!-- Main Content -->
+      <div class="overlay"></div>
+      <div class="gtco-container">
+          <div class="row">
+              <div class="col-md-12 col-md-offset-0 text-center">
+                  <div class="display-t">
+                      <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                           <h3 style="color: rgb(11, 203, 236);">Enter Your Medical Condition</h3>
+                          <!-- Updated form: input name is now "condition" -->
+                          <form action="{{ url_for('prediction') }}" method="post">
+                              <center>
+                                <input type="text" name="condition" placeholder="Enter the Medical Condition" style="height: 54px; width: 504px; color:rgb(11, 203, 236); border: 1px solid rgb(11, 203, 236);">
+                              </center>
+                              <input class="white_bt bt_main" type="submit" value="Submit" style="margin-left: 658px; margin-top: 33px;"> 
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+   </section>
+      <!-- (Optional) Section to Display Additional Recommendation Info -->
+      {% if recommended_drugs %}
+      <section class="layout_padding gradiant_bg cross_layout">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="full text_align_center white_fonts">
+                <div class="heading_main center_head_border heading_style_1">
+                  <h2>Recommendations Based on "{{ condition }}"</h2>
+                  <p style="font-size:18px;">Top Recommended Drugs: {{ recommended_drugs | join(', ') }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+      
+      <!-- Footer -->
+      <footer class="footer_style_2" style="margin-top: 99px;">
+         <div class="footer_top">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 margin_bottom_30">
+                     <div class="full width_9" style="margin-bottom:25px;">
+                        <a href="index.html"><img class="img-responsive" width="250" src="static/images/logo-1.png" alt="#"></a>
+                     </div>
+                     <div class="full width_9">
+                        <p align="justify" style="width: 600px;">Since coronavirus has shown up, inaccessibility of legitimate clinical resources is at its peak...</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      
+      <!-- JS Section -->
+      <script src="static/js/jquery.min.js"></script>
+      <script src="static/js/popper.min.js"></script>
+      <script src="static/js/bootstrap.min.js"></script>
+      <script src="static/js/wow.js"></script>
+      <script src="static/js/custom.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+   </body>
+</html>
