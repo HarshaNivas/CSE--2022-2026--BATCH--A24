@@ -212,4 +212,4 @@ def prediction():
     return render_template('prediction.html', sentiment="", drug_name="", condition="", recommended_drugs=[], msg="")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=10000)
