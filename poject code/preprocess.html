@@ -36,23 +36,23 @@
          <div class="container">
             <div class="row">
                <div class="col-md-9 col-lg-10">
-                  <div class="logo"><a href="{{url_for('index')}}"><img src="static/images/logo-1.png" alt="#" /></a></div>
+                  <div class="logo"><a href="index.html"><img src="static/images/logo-1.png" alt="#" /></a></div>
                   <div class="main_menu float-right">
                      <div class="menu">
                         <ul class="clearfix">
-                           <li><a href="{{url_for('index')}}">Home</a></li>
-                           <li><a href="{{url_for('about')}}">About</a></li>
-                           <li class="active"><a href="{{url_for('load')}}">Upload</a></li>
-                           <li><a href="{{url_for('view')}}">View</a></li>
-                           <li><a href="{{url_for('preprocess')}}">Preprocessing</a></li>
-                           <li><a href="{{url_for('model')}}">Model Training </a></li>
-                           <li><a href="{{url_for('drug')}}">EDA Section</a></li>
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="about.html">About</a></li>
+                           <li><a href="upload.html">Upload</a></li>
+                           <li><a href="view.html">View</a></li>
+                           <li class="active"><a href="preprocessing.html">Preprocessing</a></li>
+                           <li><a href="training.html">Model Training </a></li>
+                           <li><a href="eda.html">EDA Section</a></li>
                         </ul>
                      </div>
                   </div>
                </div>
                <div class="col-md-3 col-lg-2">
-                  <div class="right_bt"><a class="bt_main" href="{{url_for('prediction')}}">Prediction</a> </div>
+                  <div class="right_bt"><a class="bt_main" href="prediction.html">Prediction</a> </div>
                </div>
             </div>
          </div>
@@ -63,7 +63,7 @@
                <div class="col-md-12">
                   <div class="full">
                      <div class="slide_cont">
-                        <h2 style="right: 150px;">Upload Your Data Set </h2>
+                        <h2 style="right: 150px;bottom: 34px;">Preprocess of Your Data</h2>
                      </div>
                   </div>
                </div>
@@ -72,36 +72,36 @@
       </section>
       <!-- end header -->
 
-
+      <!-- img src="http://i.imgur.com/5NK0H1e.jpg" alt=""> -->
       <div class="overlay"></div>
       <div class="gtco-container">
           <div class="row">
               <div class="col-md-12 col-md-offset-0 text-center">
                   <div class="display-t">
-
                       <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                          <center><h3  style="bottom: 222px;color:rgb(11, 203, 236);">{{msg}}</h3></center>
-                            <h3 style="color:rgb(11, 203, 236);bottom: 115px;"> Drug recommendation </h3>
+                        <center><h3  style="bottom: 222px;color:rgb(11, 203, 236);">{{msg}}</h3></center>
+                        <h3 style="color:rgb(11, 203, 236);bottom: 115px;"> Drug recommendation</h3>
 
-                          <h3 style="color:rgb(11, 203, 236);bottom: 100px;">With the help of Machine Learning</h3>
+                      <h3 style="color:rgb(11, 203, 236);bottom: 100px;">With the help of Machine Learning</h3>
                           <p>
 
-
-
-                              <form action="{{url_for('load')}}" method="post" enctype="multipart/form-data">
-                              <center><input type="file" name="data" style="background-color:rgb(8, 213, 240);"></center>
-                              <input class="white_bt bt_main" type="submit" value="Upload"style="margin-left: 658px;margin-top: 33px;">
-                              </form>
+                            <center><form action="{{url_for('preprocess')}}" method="post">
 <!--								<a href="/upload" class="btn btn-primary btn-lg">Get Started</a>-->
+                          <input type="text" name="split" placeholder="Test Split Size"style="width: 303.99306px;height: 43.99306px; color:rgb(11, 203, 236); border-color :rgb(11, 203, 236); border-width : 50 px; "></center>
+                          <input class="white_bt bt_main" type="submit" value="Submit"style="margin-left: 658px;margin-top: 33px;">
+                          <!-- <input type="submit" value="Submit"> -->
+                              </form>
+
+                          <!-- <img src="static/images/business_img.jpg" alt=”Image” height="1000" width="1200"> -->
 <!--								<a href="#" class="btn btn-white btn-outline btn-lg"></a></p>-->
                       </div>
                   </div>
               </div>
           </div>
       </div>
-  </header>
+  </div>
 
-
+      
  <!-- section -->
  <section class="layout_padding gradiant_bg cross_layout">
     <div class="container">

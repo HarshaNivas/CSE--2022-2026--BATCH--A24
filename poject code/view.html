@@ -36,24 +36,23 @@
          <div class="container">
             <div class="row">
                <div class="col-md-9 col-lg-10">
-                  <div class="logo"><a href="{{url_for('index')}}"><img src="static/images/logo-1.png" alt="#" /></a></div>
+                  <div class="logo"><a href="index.html"><img src="static/images/logo-1.png" alt="#" /></a></div>
                   <div class="main_menu float-right">
                      <div class="menu">
                         <ul class="clearfix">
-                           <li class="active"><a href="{{url_for('index')}}">Home</a></li>
-                           <li><a href="{{url_for('about')}}">About</a></li>
-                           <li><a href="{{url_for('load')}}">Upload</a></li>
-                           <li><a href="{{url_for('view')}}">View</a></li>
-                           <li><a href="{{url_for('preprocess')}}">Preprocessing</a></li>
-                           <li class="active"><a href="{{url_for('model')}}">Model Training </a></li>
-                           <li><a href="{{url_for('drug')}}">EDA Section</a></li>
-                           
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="about.html">About</a></li>
+                           <li><a href="upload.html">Upload</a></li>
+                           <li class="active"><a href="view.html">View</a></li>
+                           <li><a href="preprocessing.html">Preprocessing</a></li>
+                           <li><a href="training.html">Model Training </a></li>
+                           <li><a href="eda.html">EDA Section</a></li>
                         </ul>
                      </div>
                   </div>
                </div>
                <div class="col-md-3 col-lg-2">
-                  <div class="right_bt"><a class="bt_main" href="{{url_for('prediction')}}">Prediction</a> </div>
+                  <div class="right_bt"><a class="bt_main" href="index.html">Prediction</a> </div>
                </div>
             </div>
          </div>
@@ -64,8 +63,8 @@
                <div class="col-md-12">
                   <div class="full">
                      <div class="slide_cont">
-                        <h2 style="right: 150px;bottom: 74px;">Train Your Model With Uploaded </h2>
-                        <h2 style="right: 150px;bottom: 82px;">Data Set</h2>
+                        <h2 style="right: 150px;">Here Is Your Uploaded</h2>
+                        <h2 style="right: 150px;">Data Set</h2>
                      </div>
                   </div>
                </div>
@@ -74,36 +73,58 @@
       </section>
       <!-- end header -->
 
-      <div class="overlay"></div>
-      <div class="gtco-container">
-          <div class="row">
-              <div class="col-md-12 col-md-offset-0 text-center">
-                  <div class="display-t">
-                      <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                        <center><h3  style="bottom: 151px;color:rgb(11, 203, 236);top: -222;">{{msg}}</h3></center>
-                        <h3 style="color:rgb(11, 203, 236);bottom: 115px;"> Drug sentiment Analysis </h3>
+      <header id="gtco-header" role="banner">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-0 text-center">
+					<div class="display-t">
 
-                      <h3 style="color:rgb(11, 203, 236);bottom: 100px;">With the help of Machine Learning</h3>
-                          <p>
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<center><h3>{{msg}}</h3></center>
+                            <h3 style="color:rgb(11, 203, 236);bottom: 115px;"> Drug recommendation </h3>
 
-                            <center> <form action="{{url_for('model')}}" method="post">
+                          <h3 style="color:rgb(11, 203, 236);bottom: 100px;">With the help of Machine Learning</h3>
+							<p>
 
-                          <center><select name="algo"style="height: 52.22222px;width: 302.22222px; border-color :color:rgb(11, 203, 236); ">
-                              <option style  = "color:rgb(11, 203, 236);" value="0">Choose an Algorithm</option>
-                              <option style  = "color:rgb(11, 203, 236);"value="1">Logistic Regression</option>
-                              <option style  = "color:rgb(11, 203, 236);"value="2">Decision Tree Classifier</option>
-                              <option style  = "color:rgb(11, 203, 236);"value="3">Random Forest</option>
-                              <option style  = "color:rgb(11, 203, 236);"value="4">Xgboost</option>
-                          </select></center>
-                          <input class="white_bt bt_main" type="submit" value="Submit"style="margin-left: 658px;margin-top: 33px;">
-                              </form></center>
+<style>
+         table,
+         td{
+        padding:10px;
+        border:1px solid rgb(11, 203, 236);
+        border-collapse:collapse;
+        }
+</style>
+        <table><b>
+            <tr>
+                {%for c in columns%}
+                <td style="color:rgb(11, 203, 236);"><b>{{c}}</b></td>
+            {%endfor%}
+            </tr>
+            {%for r in rows%}
+            <tr>
+            {%for j in r%}
+                <td style="color:rgb(11, 203, 236);">{{ j }}</td>
+                {%endfor%}
+            </tr>
+            {%endfor%}
+       </b> </table>
 
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-    
+<!--								<a href="/upload" class="btn btn-primary btn-lg">Get Started</a>-->
+<!--								<a href="#" class="btn btn-white btn-outline btn-lg"></a></p>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+
+
+
+
       <!-- section -->
  <section class="layout_padding gradiant_bg cross_layout">
     <div class="container">
@@ -111,7 +132,7 @@
           <div class="col-sm-12">
              <div class="full text_align_center white_fonts">
                 <div class="heading_main center_head_border heading_style_1">
-                   
+                   <!-- <h2>Easy <span>Steps</span></h2> -->
                 </div>
              </div>
           </div>
@@ -165,13 +186,6 @@
 
 
 
-
-
-
-
-
-
-
              <!-- footer -->
              <footer class="footer_style_2"style="margin-top: 99px;">
                 <div class="footer_top">
@@ -205,7 +219,20 @@
                                <!-- <p>the vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati..</p> -->
                             </div>
                          </div>
-                          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 margin_bottom_30"style="left: 0px;margin-left: 290px;">
+                         <!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 margin_bottom_30">
+                            <div class="full">
+                               <div class="footer_blog_2 width_9">
+                                  <h3>Twitter Feed</h3>
+                                  <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
+                                     Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
+                                  </p>
+                                  <p><i class="fa fa-twitter"></i> Creative_Talent - 26 mins
+                                     Te invitamos a seguir la cta. de WEntrepreneur_ ¡Atrévete! #Emprendimiento #PyMES #Economía #Bussines #Negocios https://t.co/Y7tZMmxGHn
+                                  </p>
+                               </div>
+                            </div>
+                         </div> -->
+                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 margin_bottom_30"style="left: 0px;margin-left: 290px;">
                             <div class="full">
                                <div class="footer_blog_2">
                                   <h3>Social</h3>
